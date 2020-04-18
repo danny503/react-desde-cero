@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 //const mayorEdad = edad => edad > 18
 //const persona = {"nombre": "Daniel", "Apellido": "Lopez", "edad": 20}
@@ -13,9 +14,23 @@ const Card = ({title, img, price, profesor}) => (
           { `Prof.: ${profesor}` }
         </div>
       <div className="s-main-center">
-        <a className="button--ghost-alert button--tiny" href="#"> {`$ ${price}`} </a>
+        <a className="button--ghost-alert button--tiny" href="#"> {`$ ${price} USD`} </a>
       </div>
     </div>
     </article>
 )
+Card.propTypes = {
+  title: PropTypes.string,
+  img: PropTypes.string,
+  price: PropTypes.number,
+  profesor: PropTypes.string
+
+}
+Card.defaultProps = {
+  title: "No se encontró titulo",
+  img: "https://reportedigital.com/wp-content/uploads/2019/03/tipos-de-almacenamiento-en-la-nube.jpg",
+  price: "--",
+  profesor: ""
+}
+
 export default Card
