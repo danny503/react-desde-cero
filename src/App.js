@@ -18,11 +18,19 @@ const App = () => (
   </div>
 
   <div className="ed-grid m-grid-3">
-    <Card />
-    <Card />
-    <Card />
-    <Card />
+    <Card 
+      title="React desde cero"
+      img="https://edteam-media.s3.amazonaws.com/courses/original/5eaaec0b-fa78-4f48-94b6-61b757e1f5fa.png"  
+      price="50 usd"
+      profesor="Daniel Lopez"
+      />    
     
+    <Card 
+      title="Vue desde cero"
+      img="https://edteam-media.s3.amazonaws.com/courses/original/b393cce0-3ec8-4c61-877d-92e2e04f9120.png"  
+      price="30 usd"
+      profesor="Cristian Lopez"
+      />
   </div>
 </>
 )
